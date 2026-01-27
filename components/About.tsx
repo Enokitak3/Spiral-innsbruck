@@ -47,7 +47,7 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative scroll-reveal">
+          <div className="relative scroll-reveal pb-12 md:pb-0">
              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                <img 
                  src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=1200" 
@@ -55,17 +55,17 @@ const About: React.FC = () => {
                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                />
              </div>
-             {/* Floating Badge for Impact */}
-             <div className="absolute -bottom-8 -left-8 bg-stone-900 text-white p-8 rounded-xl hidden md:block border border-white/10 shadow-2xl max-w-xs">
-                <div className="mb-4 flex gap-1">
-                  {[1,2,3,4,5].map(s => <span key={s} className="text-yellow-400 text-sm">★</span>)}
+             {/* Floating Badge - Now visible on all screens with adjusted positioning for mobile */}
+             <div className="absolute -bottom-4 left-4 right-4 md:right-auto md:-bottom-8 md:-left-8 bg-stone-900 text-white p-6 md:p-8 rounded-xl border border-white/10 shadow-2xl md:max-w-xs z-10">
+                <div className="mb-3 md:mb-4 flex gap-1">
+                  {[1,2,3,4,5].map(s => <span key={s} className="text-yellow-400 text-xs md:text-sm">★</span>)}
                 </div>
-                <p className="text-2xl font-bold mb-1 italic font-playfair leading-tight">&ldquo;Not just a cafe, it's a full sensory experience.&rdquo;</p>
-                <p className="text-stone-400 uppercase tracking-widest text-[9px] font-black mt-4">Andreas-Hofer-Straße 7</p>
+                <p className="text-lg md:text-2xl font-bold mb-1 italic font-playfair leading-tight">&ldquo;Not just a cafe, it's a full sensory experience.&rdquo;</p>
+                <p className="text-stone-400 uppercase tracking-widest text-[8px] md:text-[9px] font-black mt-3 md:mt-4">Andreas-Hofer-Straße 7</p>
              </div>
              
              {/* Subtle Spiral Design Element */}
-             <div className="absolute -top-12 -right-12 w-48 h-48 opacity-5 pointer-events-none">
+             <div className="absolute -top-8 -right-8 md:-top-12 md:-right-12 w-32 h-32 md:w-48 md:h-48 opacity-5 pointer-events-none">
                 <svg viewBox="0 0 100 100" className="w-full h-full animate-[spin_20s_linear_infinite]">
                   <path 
                     d="M 50 50 A 5 5 0 0 0 40 50 A 10 10 0 0 0 60 50 A 15 15 0 0 0 30 50 A 20 20 0 0 0 70 50 A 25 25 0 0 0 20 50 A 30 30 0 0 0 80 50" 

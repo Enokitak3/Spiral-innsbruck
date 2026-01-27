@@ -34,7 +34,7 @@ const Gallery: React.FC = () => {
           {images.map((img, idx) => (
             <div 
               key={idx} 
-              className="group relative aspect-[4/5] overflow-hidden rounded-2xl scroll-reveal bg-stone-100 shadow-sm hover:shadow-2xl transition-shadow duration-500"
+              className={`group relative aspect-[4/5] overflow-hidden rounded-2xl scroll-reveal bg-stone-100 shadow-sm hover:shadow-2xl transition-shadow duration-500 ${idx >= 6 ? 'hidden sm:block' : 'block'}`}
               style={{ transitionDelay: `${(idx % 4) * 150}ms` }}
             >
               <img 
